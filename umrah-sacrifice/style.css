@@ -1,0 +1,1200 @@
+/* ================================
+   طريق العمرة والأضحية
+   Mobile First
+================================ */
+
+:root {
+    --bg: #f4f8f7;
+    --card: #ffffff;
+    --text: #173b3a;
+    --muted: #6b7f7d;
+    --border: #e3ecea;
+
+    --primary: #0f766e;
+    --primary-dark: #115e59;
+    --secondary: #14b8a6;
+
+    --gold: #d49a2a;
+    --gold-light: #fff7df;
+
+    --success: #16805b;
+    --success-bg: #e8f7f0;
+
+    --danger: #c24141;
+    --danger-bg: #fff1f1;
+
+    --shadow: 0 8px 30px rgba(23, 59, 58, 0.07);
+
+    --radius: 20px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family:
+        Tahoma,
+        Arial,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+}
+
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+.app {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    padding: 16px 13px 35px;
+}
+
+
+/* ================================
+   Hero
+================================ */
+
+.hero {
+    text-align: center;
+    padding: 18px 10px 24px;
+}
+
+
+.hero-icon {
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+
+
+.hero h1 {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 4px;
+}
+
+
+.hero p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+.starting-badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 13px;
+
+    background: #e5f4f1;
+    color: var(--primary-dark);
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   Cards
+================================ */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+
+.card-title span {
+    font-size: 23px;
+}
+
+
+.card-title h2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* ================================
+   Total Card
+================================ */
+
+.total-card {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff 0%,
+            #f0faf8 100%
+        );
+
+    border-color: #d8ebe8;
+}
+
+
+.big-number {
+    text-align: center;
+    margin: 16px 0 3px;
+
+    color: var(--primary);
+    font-size: 36px;
+    font-weight: 900;
+}
+
+
+.big-number small {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.goal-text {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+.goal-text strong {
+    color: var(--text);
+}
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+
+.mini-stat {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    padding: 10px 5px;
+    text-align: center;
+}
+
+
+.mini-stat span {
+    display: block;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+
+.mini-stat strong {
+    display: block;
+    font-size: 16px;
+    margin-top: 3px;
+}
+
+
+.mini-stat small {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+
+/* ================================
+   Progress
+================================ */
+
+.progress-container {
+    margin-top: 18px;
+}
+
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 12px;
+    color: var(--muted);
+
+    margin-bottom: 7px;
+}
+
+
+.progress-bar {
+    height: 11px;
+    width: 100%;
+
+    background: #e8eeee;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+}
+
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+
+    border-radius: 50px;
+
+    transition: width 0.6s ease;
+}
+
+
+.total-fill {
+    background: linear-gradient(
+        90deg,
+        var(--primary-dark),
+        var(--secondary)
+    );
+}
+
+
+.umrah-fill {
+    background: linear-gradient(
+        90deg,
+        #0f766e,
+        #2dd4bf
+    );
+}
+
+
+.sacrifice-fill {
+    background: linear-gradient(
+        90deg,
+        #b7791f,
+        #e8b04b
+    );
+}
+
+
+/* ================================
+   Goal Cards
+================================ */
+
+.goal-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.goal-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #edf8f6;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+}
+
+
+.sacrifice-card .goal-icon {
+    background: var(--gold-light);
+}
+
+
+.goal-header h2 {
+    font-size: 19px;
+}
+
+
+.goal-header p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+.goal-header strong {
+    color: var(--text);
+}
+
+
+.goal-numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+
+.goal-numbers > div {
+    background: #f8fbfa;
+    border-radius: 13px;
+
+    padding: 9px 5px;
+
+    text-align: center;
+}
+
+
+.goal-numbers span {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+
+.goal-numbers strong {
+    display: block;
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+
+.goal-numbers small {
+    color: var(--muted);
+    font-size: 9px;
+}
+
+
+/* ================================
+   Completed
+================================ */
+
+.goal-completed,
+.success-message {
+    margin-top: 14px;
+
+    background: var(--success-bg);
+    color: var(--success);
+
+    border-radius: 12px;
+
+    padding: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ================================
+   Forms
+================================ */
+
+form {
+    margin-top: 16px;
+}
+
+
+label {
+    display: block;
+
+    margin: 13px 0 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+label span {
+    color: var(--muted);
+    font-weight: normal;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    border: 1px solid #d9e5e3;
+
+    background: #fbfdfd;
+
+    color: var(--text);
+
+    border-radius: 12px;
+
+    padding: 13px 12px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+input:focus,
+select:focus {
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 3px rgba(20, 184, 166, 0.1);
+}
+
+
+.primary-btn,
+.secondary-btn,
+.clear-btn {
+    border: none;
+    border-radius: 13px;
+
+    padding: 13px 15px;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.15s,
+        opacity 0.15s;
+}
+
+
+.primary-btn:active,
+.secondary-btn:active,
+.clear-btn:active {
+    transform: scale(0.98);
+}
+
+
+.primary-btn {
+    width: 100%;
+
+    margin-top: 17px;
+
+    background: var(--primary);
+    color: white;
+
+    box-shadow:
+        0 7px 18px rgba(15, 118, 110, 0.2);
+}
+
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+}
+
+
+/* ================================
+   Plan
+================================ */
+
+.plan-card {
+    background: #fffdf7;
+    border-color: #f0e5c9;
+}
+
+
+.muted {
+    color: var(--muted);
+    font-size: 12px;
+
+    margin-top: 7px;
+}
+
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7px;
+
+    margin-top: 15px;
+}
+
+
+.plan-item {
+    background: white;
+    border: 1px solid #eee4cc;
+
+    border-radius: 12px;
+
+    padding: 9px 4px;
+
+    text-align: center;
+}
+
+
+.plan-item span {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+
+.plan-item strong {
+    display: block;
+    margin-top: 3px;
+    font-size: 13px;
+}
+
+
+.split-plan {
+    display: grid;
+    gap: 7px;
+
+    margin-top: 10px;
+}
+
+
+.split-plan div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: white;
+
+    border: 1px solid #eee4cc;
+
+    border-radius: 12px;
+
+    padding: 10px;
+
+    font-size: 12px;
+}
+
+
+.split-plan strong {
+    color: var(--primary-dark);
+}
+
+
+.plan-note {
+    color: var(--muted);
+    font-size: 10px;
+
+    margin-top: 10px;
+}
+
+
+/* ================================
+   Statistics
+================================ */
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+
+.stat-box {
+    background: #f8fbfa;
+
+    border-radius: 14px;
+
+    padding: 12px 5px;
+
+    text-align: center;
+}
+
+
+.stat-icon {
+    font-size: 20px;
+}
+
+
+.stat-box span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+
+.stat-box strong {
+    display: block;
+
+    font-size: 15px;
+
+    margin-top: 3px;
+}
+
+
+.stat-box small {
+    color: var(--muted);
+    font-size: 9px;
+}
+
+
+/* ================================
+   Section Header
+================================ */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.count-badge {
+    background: #e6f4f1;
+    color: var(--primary-dark);
+
+    min-width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* ================================
+   Empty
+================================ */
+
+.empty-state {
+    text-align: center;
+
+    padding: 30px 10px 15px;
+
+    color: var(--muted);
+}
+
+
+.empty-state div {
+    font-size: 42px;
+    margin-bottom: 5px;
+}
+
+
+.empty-state h3 {
+    color: var(--text);
+    font-size: 15px;
+}
+
+
+.empty-state p {
+    font-size: 12px;
+}
+
+
+/* ================================
+   Transactions
+================================ */
+
+.transactions-list {
+    margin-top: 13px;
+}
+
+
+.transaction {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #edf2f1;
+}
+
+
+.transaction:last-child {
+    border-bottom: none;
+}
+
+
+.transaction-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #edf8f6;
+
+    font-size: 21px;
+}
+
+
+.transaction.sacrifice .transaction-icon {
+    background: var(--gold-light);
+}
+
+
+.transaction-info {
+    min-width: 0;
+    flex: 1;
+}
+
+
+.transaction-title {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+.transaction-date {
+    color: var(--muted);
+    font-size: 10px;
+
+    margin-top: 1px;
+}
+
+
+.transaction-note {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    margin-top: 1px;
+}
+
+
+.transaction-amount {
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+.transaction-amount strong {
+    display: block;
+
+    color: var(--success);
+
+    font-size: 14px;
+}
+
+
+.transaction-actions {
+    display: flex;
+    gap: 4px;
+
+    margin-top: 3px;
+}
+
+
+.action-btn {
+    border: none;
+
+    background: transparent;
+
+    font-size: 11px;
+
+    padding: 2px 3px;
+
+    color: var(--muted);
+}
+
+
+.action-btn:hover {
+    color: var(--primary);
+}
+
+
+.action-btn.delete:hover {
+    color: var(--danger);
+}
+
+
+/* ================================
+   Backup
+================================ */
+
+.backup-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 14px;
+}
+
+
+.secondary-btn {
+    background: #edf5f3;
+    color: var(--primary-dark);
+}
+
+
+.secondary-btn:hover {
+    background: #e0efec;
+}
+
+
+.modal-buttons {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+
+.modal-buttons .primary-btn {
+    margin-top: 0;
+}
+
+
+/* ================================
+   Clear
+================================ */
+
+.danger-section {
+    text-align: center;
+
+    margin: 8px 0 25px;
+}
+
+
+.clear-btn {
+    background: transparent;
+    color: var(--danger);
+
+    font-size: 12px;
+
+    padding: 8px 14px;
+}
+
+
+.clear-btn:hover {
+    background: var(--danger-bg);
+}
+
+
+/* ================================
+   Toast
+================================ */
+
+.toast {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 20px;
+
+    transform:
+        translate(-50%, 100px);
+
+    opacity: 0;
+
+    z-index: 1000;
+
+    background: #173b3a;
+    color: white;
+
+    padding: 11px 17px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s,
+        opacity 0.3s;
+
+    max-width: calc(100% - 30px);
+
+    text-align: center;
+}
+
+
+.toast.show {
+    transform:
+        translate(-50%, 0);
+
+    opacity: 1;
+}
+
+
+/* ================================
+   Modal
+================================ */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(13, 37, 36, 0.55);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    z-index: 900;
+}
+
+
+.modal-box {
+    position: relative;
+
+    background: white;
+
+    width: 100%;
+    max-width: 430px;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+
+.close-modal {
+    position: absolute;
+
+    top: 11px;
+    left: 12px;
+
+    border: none;
+
+    background: #f1f5f4;
+
+    width: 31px;
+    height: 31px;
+
+    border-radius: 50%;
+
+    font-size: 21px;
+
+    color: var(--muted);
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+    text-align: center;
+
+    color: var(--muted);
+
+    padding: 5px 0 15px;
+}
+
+
+footer p {
+    color: var(--primary-dark);
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+footer small {
+    font-size: 10px;
+}
+
+
+/* ================================
+   Dark Mode
+================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --bg: #0d1918;
+        --card: #142321;
+        --text: #e8f4f2;
+        --muted: #9db2af;
+        --border: #25403d;
+
+        --shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    }
+
+
+    body {
+        background: var(--bg);
+    }
+
+
+    .total-card {
+        background:
+            linear-gradient(
+                145deg,
+                #142321,
+                #102a27
+            );
+    }
+
+
+    .mini-stat,
+    .goal-numbers > div,
+    .stat-box {
+        background: #10201e;
+        border-color: #25403d;
+    }
+
+
+    input,
+    select {
+        background: #10201e;
+        color: var(--text);
+        border-color: #31504c;
+    }
+
+
+    .starting-badge {
+        background: #173d38;
+        color: #7dd3c8;
+    }
+
+
+    .plan-card {
+        background: #211e15;
+        border-color: #4b4127;
+    }
+
+
+    .plan-item,
+    .split-plan div {
+        background: #181a16;
+        border-color: #4b4127;
+    }
+
+
+    .secondary-btn {
+        background: #183a36;
+        color: #9be4da;
+    }
+
+
+    .goal-icon {
+        background: #173b38;
+    }
+
+
+    .sacrifice-card .goal-icon {
+        background: #3a301b;
+    }
+
+
+    .transaction-icon {
+        background: #173b38;
+    }
+
+
+    .transaction.sacrifice .transaction-icon {
+        background: #3a301b;
+    }
+
+
+    .modal-box {
+        background: #142321;
+    }
+
+
+    .close-modal {
+        background: #203431;
+        color: var(--muted);
+    }
+
+
+    .progress-bar {
+        background: #263a38;
+    }
+
+}
+
+
+/* ================================
+   Larger Screens
+================================ */
+
+@media (min-width: 600px) {
+
+    .app {
+        padding-top: 25px;
+    }
+
+
+    .hero {
+        padding-bottom: 30px;
+    }
+
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+
+    .card {
+        padding: 22px;
+    }
+
+
+    .big-number {
+        font-size: 42px;
+    }
+
+}
