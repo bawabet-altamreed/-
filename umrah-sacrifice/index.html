@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f766e">
+
+    <title>طريق العمرة والأضحية</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header class="hero">
+            <div class="hero-icon">🕋</div>
+
+            <h1>طريق العمرة والأضحية</h1>
+
+            <p>كل جنيه تقرّبك من هدفك بإذن الله ❤️</p>
+
+            <div class="starting-badge">
+                البداية: سبتمبر 2026
+            </div>
+        </header>
+
+
+        <!-- Total Goal -->
+        <section class="card total-card">
+
+            <div class="card-title">
+                <span>🎯</span>
+                <h2>الهدف الكلي</h2>
+            </div>
+
+            <div class="big-number">
+                <span id="totalSaved">0</span>
+                <small>جنيه</small>
+            </div>
+
+            <div class="goal-text">
+                الهدف الكلي:
+                <strong>60,000 جنيه</strong>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="mini-stat">
+                    <span>تم ادخار</span>
+                    <strong id="totalSavedSmall">0</strong>
+                    <small>جنيه</small>
+                </div>
+
+                <div class="mini-stat">
+                    <span>المتبقي</span>
+                    <strong id="totalRemaining">60,000</strong>
+                    <small>جنيه</small>
+                </div>
+
+                <div class="mini-stat">
+                    <span>الإنجاز</span>
+                    <strong id="totalPercent">0%</strong>
+                </div>
+
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span>التقدم</span>
+                    <span id="totalProgressText">0%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div
+                        id="totalProgress"
+                        class="progress-fill total-fill"
+                        style="width: 0%">
+                    </div>
+                </div>
+            </div>
+
+            <div id="goalCompleted" class="success-message hidden">
+                🎉 ما شاء الله! تم تحقيق الهدف الكلي 60,000 جنيه ❤️
+            </div>
+
+        </section>
+
+
+        <!-- Umrah -->
+        <section class="card goal-card umrah-card">
+
+            <div class="goal-header">
+                <div class="goal-icon">🕋</div>
+
+                <div>
+                    <h2>العمرة</h2>
+                    <p>الهدف: <strong>45,000 جنيه</strong></p>
+                </div>
+            </div>
+
+            <div class="goal-numbers">
+
+                <div>
+                    <span>المدخر</span>
+                    <strong id="umrahSaved">0</strong>
+                    <small>جنيه</small>
+                </div>
+
+                <div>
+                    <span>المتبقي</span>
+                    <strong id="umrahRemaining">45,000</strong>
+                    <small>جنيه</small>
+                </div>
+
+                <div>
+                    <span>الإنجاز</span>
+                    <strong id="umrahPercent">0%</strong>
+                </div>
+
+            </div>
+
+            <div class="progress-container">
+
+                <div class="progress-label">
+                    <span>التقدم نحو العمرة</span>
+                    <span id="umrahProgressText">0%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div
+                        id="umrahProgress"
+                        class="progress-fill umrah-fill"
+                        style="width: 0%">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="umrahCompleted" class="goal-completed hidden">
+                🎉 تم تحقيق هدف العمرة بإذن الله!
+            </div>
+
+        </section>
+
+
+        <!-- Sacrifice -->
+        <section class="card goal-card sacrifice-card">
+
+            <div class="goal-header">
+                <div class="goal-icon">🐑</div>
+
+                <div>
+                    <h2>الأضحية</h2>
+                    <p>الهدف: <strong>15,000 جنيه</strong></p>
+                </div>
+            </div>
+
+            <div class="goal-numbers">
+
+                <div>
+                    <span>المدخر</span>
+                    <strong id="sacrificeSaved">0</strong>
+                    <small>جنيه</small>
+                </div>
+
+                <div>
+                    <span>المتبقي</span>
+                    <strong id="sacrificeRemaining">15,000</strong>
+                    <small>جنيه</small>
+                </div>
+
+                <div>
+                    <span>الإنجاز</span>
+                    <strong id="sacrificePercent">0%</strong>
+                </div>
+
+            </div>
+
+            <div class="progress-container">
+
+                <div class="progress-label">
+                    <span>التقدم نحو الأضحية</span>
+                    <span id="sacrificeProgressText">0%</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div
+                        id="sacrificeProgress"
+                        class="progress-fill sacrifice-fill"
+                        style="width: 0%">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="sacrificeCompleted" class="goal-completed hidden">
+                🎉 تم تحقيق هدف الأضحية بإذن الله!
+            </div>
+
+        </section>
+
+
+        <!-- Saving Plan -->
+        <section class="card plan-card">
+
+            <div class="card-title">
+                <span>📅</span>
+                <h2>خطة الادخار</h2>
+            </div>
+
+            <p class="muted">
+                لو بدأت من سبتمبر 2026 وحتى نهاية أبريل 2027:
+            </p>
+
+            <div class="plan-grid">
+
+                <div class="plan-item">
+                    <span>المدة</span>
+                    <strong>8 أشهر</strong>
+                </div>
+
+                <div class="plan-item">
+                    <span>شهريًا</span>
+                    <strong>7,500 جنيه</strong>
+                </div>
+
+                <div class="plan-item">
+                    <span>يوميًا تقريبًا</span>
+                    <strong>250 جنيه</strong>
+                </div>
+
+            </div>
+
+            <div class="split-plan">
+
+                <div>
+                    🕋 العمرة
+                    <strong>5,625 جنيه / شهر</strong>
+                </div>
+
+                <div>
+                    🐑 الأضحية
+                    <strong>1,875 جنيه / شهر</strong>
+                </div>
+
+            </div>
+
+            <p class="plan-note">
+                💡 هذه الخطة إرشادية فقط ولا تؤثر على الحسابات الفعلية.
+            </p>
+
+        </section>
+
+
+        <!-- Add Saving -->
+        <section class="card">
+
+            <div class="card-title">
+                <span>➕</span>
+                <h2>سجّل ادخار اليوم</h2>
+            </div>
+
+            <form id="savingForm">
+
+                <label for="savingType">
+                    نوع الادخار
+                </label>
+
+                <select id="savingType" required>
+                    <option value="umrah">🕋 العمرة</option>
+                    <option value="sacrifice">🐑 الأضحية</option>
+                </select>
+
+
+                <label for="amount">
+                    المبلغ بالجنيه
+                </label>
+
+                <input
+                    type="number"
+                    id="amount"
+                    min="0.01"
+                    step="0.01"
+                    placeholder="مثال: 100"
+                    required
+                >
+
+
+                <label for="note">
+                    ملاحظة <span>(اختياري)</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="note"
+                    maxlength="100"
+                    placeholder="مثال: ادخار اليوم"
+                >
+
+
+                <button type="submit" class="primary-btn">
+                    <span>+</span>
+                    إضافة الادخار
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="card">
+
+            <div class="card-title">
+                <span>📊</span>
+                <h2>الإحصائيات</h2>
+            </div>
+
+            <div class="statistics">
+
+                <div class="stat-box">
+                    <div class="stat-icon">📅</div>
+                    <span>ادخار هذا الشهر</span>
+                    <strong id="monthlySaved">0</strong>
+                    <small>جنيه</small>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-icon">🧾</div>
+                    <span>عدد العمليات</span>
+                    <strong id="transactionCount">0</strong>
+                    <small>عملية</small>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-icon">🏆</div>
+                    <span>أعلى شهر</span>
+                    <strong id="bestMonth">—</strong>
+                    <small id="bestMonthAmount">0 جنيه</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Transactions -->
+        <section class="card">
+
+            <div class="section-header">
+
+                <div class="card-title">
+                    <span>📜</span>
+                    <h2>آخر المدخرات</h2>
+                </div>
+
+                <span id="transactionCountBadge" class="count-badge">
+                    0
+                </span>
+
+            </div>
+
+
+            <div id="emptyState" class="empty-state">
+
+                <div>💰</div>
+
+                <h3>لسه أول الطريق ❤️</h3>
+
+                <p>
+                    أول عملية ادخار هتظهر هنا بإذن الله.
+                </p>
+
+            </div>
+
+
+            <div id="transactionsList" class="transactions-list"></div>
+
+        </section>
+
+
+        <!-- Backup -->
+        <section class="card backup-card">
+
+            <div class="card-title">
+                <span>💾</span>
+                <h2>النسخ الاحتياطي</h2>
+            </div>
+
+            <p class="muted">
+                احتفظ بنسخة من بياناتك حتى لا تفقدها عند تغيير الجهاز أو المتصفح.
+            </p>
+
+            <div class="backup-buttons">
+
+                <button
+                    type="button"
+                    id="exportBtn"
+                    class="secondary-btn">
+                    📤 تصدير JSON
+                </button>
+
+                <button
+                    type="button"
+                    id="importBtn"
+                    class="secondary-btn">
+                    📥 استيراد JSON
+                </button>
+
+                <input
+                    type="file"
+                    id="importFile"
+                    accept=".json,application/json"
+                    hidden
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- Clear -->
+        <section class="danger-section">
+
+            <button
+                type="button"
+                id="clearAllBtn"
+                class="clear-btn">
+                🗑️ مسح الكل
+            </button>
+
+        </section>
+
+
+        <footer>
+            <p>طريق العمرة والأضحية ❤️</p>
+            <small>بياناتك محفوظة على جهازك فقط</small>
+        </footer>
+
+    </div>
+
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal hidden">
+
+        <div class="modal-box">
+
+            <button
+                type="button"
+                id="closeModal"
+                class="close-modal">
+                ×
+            </button>
+
+            <div class="card-title">
+                <span>✏️</span>
+                <h2>تعديل الادخار</h2>
+            </div>
+
+            <form id="editForm">
+
+                <input type="hidden" id="editId">
+
+                <label for="editType">
+                    نوع الادخار
+                </label>
+
+                <select id="editType" required>
+                    <option value="umrah">🕋 العمرة</option>
+                    <option value="sacrifice">🐑 الأضحية</option>
+                </select>
+
+                <label for="editAmount">
+                    المبلغ
+                </label>
+
+                <input
+                    type="number"
+                    id="editAmount"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+
+                <label for="editNote">
+                    الملاحظة
+                </label>
+
+                <input
+                    type="text"
+                    id="editNote"
+                    maxlength="100"
+                >
+
+                <div class="modal-buttons">
+
+                    <button
+                        type="submit"
+                        class="primary-btn">
+                        حفظ التعديل
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelEdit"
+                        class="secondary-btn">
+                        إلغاء
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
